@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heading } from '@/components/ui/heading';
 import { Separator } from '@/components/ui/separator';
 import { formatter } from '@/lib/utils';
-import { CreditCard, DollarSign, Package } from 'lucide-react';
+import { CreditCard, Package } from 'lucide-react';
 
 interface DashboardPageProps {
   params: { storeId: string };
@@ -30,7 +30,7 @@ const DashboardPage = async ({ params }: DashboardPageProps) => {
               <CardTitle className='text-sm font-medium'>
                 Faturamento total
               </CardTitle>
-              <DollarSign className='h-4 w-4 text-muted-foreground' />
+              <span className='h-4 w-4 text-muted-foreground'>R$</span>
             </CardHeader>
             <CardContent>
               <div className='text-2xl font-bold'>

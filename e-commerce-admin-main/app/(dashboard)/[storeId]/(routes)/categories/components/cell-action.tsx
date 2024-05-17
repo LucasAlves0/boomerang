@@ -40,7 +40,7 @@ export const CellAction = ({ data }: CellActionProps) => {
   // Função para copiar o ID da categoria para a área de transferência
   const onCopy = (id: string) => {
     navigator.clipboard.writeText(id);
-    toast.success('Category id copied to clipboard'); // Exibe notificação de sucesso
+    toast.success('ID da categoria copiado para a área de transferência'); // Exibe notificação de sucesso
   };
 
   // Função assíncrona para excluir a categoria
@@ -49,10 +49,10 @@ export const CellAction = ({ data }: CellActionProps) => {
       setLoading(true);  // Ativa o indicador de carregamento
       await axios.delete(`/api/${params.storeId}/categories/${data.id}`); // Requisição DELETE
       router.refresh();  // Recarrega a página
-      toast.success('Category deleted.');  // Exibe notificação de sucesso
+      toast.success('Categoria excluída.');  // Exibe notificação de sucesso
     } catch (error) {
       toast.error(
-        'Make sure you removed all Products using this Category first.' // Mensagem de erro específica
+        'Certifique-se de remover todos os produtos que usam esta categoria primeiro.' // Mensagem de erro específica
       );
     } finally {
       setLoading(false); // Desativa o indicador de carregamento
@@ -72,15 +72,15 @@ export const CellAction = ({ data }: CellActionProps) => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant='ghost' className='h-8 w-8 p-0'>
-            <span className='sr-only'>Open Menu</span>
+            <span className='sr-only'>Abrir menu</span>
             <MoreHorizontal className='h-4 w-4' />
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align='end'>
-          <DropdownMenuLabel>Actions</DropdownMenuLabel>
+          <DropdownMenuLabel>Ação</DropdownMenuLabel>
           <DropdownMenuItem onClick={() => onCopy(data.id)}>
             <Copy className='mr-2 h-4 w-4' />
-            Copy Id
+            Copiar ID
           </DropdownMenuItem>
           <DropdownMenuItem
             onClick={() =>
@@ -88,11 +88,11 @@ export const CellAction = ({ data }: CellActionProps) => {
             }
           >
             <Edit className='mr-2 h-4 w-4' />
-            Update
+            Atualizar
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => setOpen(true)}>
             <Trash className='mr-2 h-4 w-4' />
-            Delete
+            Deletar
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>

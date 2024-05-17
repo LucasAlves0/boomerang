@@ -102,10 +102,10 @@ export const CategoryForm = ({
       await axios.delete(`/api/${params.storeId}/categories/${params.categoryId}`);
       router.refresh();
       router.push(`/${params.storeId}/categories`);
-      toast.success('Category deleted.'); // Notificação de sucesso na exclusão
+      toast.success('Categoria excluída.'); // Notificação de sucesso na exclusão
     } catch (error) {
       toast.error(
-        'Make sure you removed all products using this category first.' // Mensagem de erro específica para exclusão
+        'Certifique-se de remover todos os produtos que usam esta categoria primeiro.' // Mensagem de erro específica para exclusão
       );
     } finally {
       setLoading(false);
