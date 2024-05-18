@@ -33,7 +33,7 @@ export function MainNav({
     },
     {
       href: `/${params.storeId}/colors`,
-      label: 'Tipo',
+      label: 'Cor',
       active: pathName === `/${params.storeId}/colors`,
     },
     {
@@ -52,8 +52,8 @@ export function MainNav({
       active: pathName === `/${params.storeId}/settings`,
     },
     {
-      href: 'https://e-commerce-store-sagar.vercel.app',
-      label: 'Store',
+      href: 'http://localhost:3001',
+      label: 'Loja',
     },
   ];
 

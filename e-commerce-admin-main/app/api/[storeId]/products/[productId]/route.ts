@@ -114,7 +114,7 @@ export async function PATCH(
     }
 
     if (!sizeId) {
-      return new NextResponse('O ID do tipo é obrigatório', { status: 400 });
+      return new NextResponse('O ID do cor é obrigatório', { status: 400 });
     }
 
     if (!params.productId) {

@@ -56,7 +56,7 @@ const MobileFilters: React.FC<MobileFiltersProps> = ({
               />
               <Filter 
                 valueKey="colorId" 
-                name="Tipo" 
+                name="Cor" 
                 data={colors}
               />
             </div>

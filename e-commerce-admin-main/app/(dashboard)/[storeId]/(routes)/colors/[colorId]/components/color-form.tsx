@@ -44,9 +44,9 @@ export const ColorForm: React.FC<ColorFormProps> = ({ initialData }) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const title = initialData ? 'Editar tipo' : 'Criar tipo';
-  const description = initialData ? 'Editar um tipo.' : 'Adicionar um novo tipo';
-  const toastMessage = initialData ? 'Tipo atualizado.' : 'Tipo criado.';
+  const title = initialData ? 'Editar cor' : 'Criar cor';
+  const description = initialData ? 'Editar uma cor.' : 'Adicionar uma nova cor';
+  const toastMessage = initialData ? 'cor atualizada.' : 'cor criada.';
   const action = initialData ? 'Salvar alterações' : 'Criar';
 
   const form = useForm<ColorFormValues>({
@@ -83,9 +83,9 @@ export const ColorForm: React.FC<ColorFormProps> = ({ initialData }) => {
       await axios.delete(`/api/${params.storeId}/colors/${params.colorId}`);
       router.refresh();
       router.push(`/${params.storeId}/colors`);
-      toast.success('Tipo deletado.');
+      toast.success('Cor deletada.');
     } catch (error: any) {
-      toast.error('Certifique-se de remover todos os produtos que usam este tipo primeiro.');
+      toast.error('Certifique-se de remover todos os produtos que usam esta cor primeiro.');
     } finally {
       setLoading(false);
       setOpen(false);
@@ -129,7 +129,7 @@ export const ColorForm: React.FC<ColorFormProps> = ({ initialData }) => {
                   <FormControl>
                     <Input
                       disabled={loading}
-                      placeholder='Nome do tipo'
+                      placeholder='Nome da cor'
                       {...field}
                     />
                   </FormControl>
@@ -147,7 +147,7 @@ export const ColorForm: React.FC<ColorFormProps> = ({ initialData }) => {
                     <div className='flex items-center gap-x-4'>
                       <Input
                         disabled={loading}
-                        placeholder='Caracteristica do tipo'
+                        placeholder='Caracteristica da cor'
                         {...field}
                       />
                       <div

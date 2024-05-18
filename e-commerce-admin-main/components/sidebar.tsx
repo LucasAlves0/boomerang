@@ -62,8 +62,8 @@ export function Sidebar() {
       active: pathName === `/${params.storeId}/settings`,
     },
     {
-      href: 'https://e-commerce-store-sagar.vercel.app',
-      label: 'Store',
+      href: 'http://localhost:3001',
+      label: 'Loja',
     },
   ];
   return (

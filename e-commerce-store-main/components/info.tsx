@@ -35,7 +35,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
           </div>
         </div>
         <div className="flex items-center gap-x-4">
-  <h3 className="font-semibold text-black">Tipo:</h3>
+  <h3 className="font-semibold text-black">Cor:</h3>
   <span className="text-black">{data?.color?.name}</span>
 </div>
 

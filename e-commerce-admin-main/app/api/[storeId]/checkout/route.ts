@@ -21,7 +21,7 @@ export async function POST(
   const { productIds } = await req.json();
 
   if (!productIds || productIds.length === 0) {
-    return new NextResponse('Product ids are required', { status: 400 });
+    return new NextResponse('Os IDs dos produtos são obrigatórios', { status: 400 });
   }
 
   const products = await prismadb.product.findMany({
@@ -38,7 +38,7 @@ export async function POST(
     line_items.push({
       quantity: 1,
       price_data: {
-        currency: 'USD',
+        currency: 'BRL',
         product_data: {
           name: product.name,
         },

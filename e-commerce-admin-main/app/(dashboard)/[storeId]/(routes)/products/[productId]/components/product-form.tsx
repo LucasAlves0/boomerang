@@ -251,7 +251,7 @@ export const ProductForm = ({
               name='sizeId'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Tipo</FormLabel>
+                  <FormLabel>Marca</FormLabel>
                   <Select
                     disabled={loading}
                     onValueChange={field.onChange}
@@ -283,7 +283,7 @@ export const ProductForm = ({
               name='colorId'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Marca</FormLabel>
+                  <FormLabel>Cor</FormLabel>
                   <Select
                     disabled={loading}
                     onValueChange={field.onChange}

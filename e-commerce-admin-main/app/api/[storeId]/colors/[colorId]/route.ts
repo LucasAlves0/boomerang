@@ -9,7 +9,7 @@ export async function GET(
 ) {
   try {
     if (!params.colorId) {
-      return new NextResponse('O ID do tipo é obrigatório', { status: 400 });
+      return new NextResponse('O ID do cor é obrigatório', { status: 400 });
     }
 
     const color = await prismadb.color.findUnique({
@@ -37,7 +37,7 @@ export async function DELETE(
     }
 
     if (!params.colorId) {
-      return new NextResponse('O ID do tipo é obrigatório', { status: 400 });
+      return new NextResponse('O ID do cor é obrigatório', { status: 400 });
     }
 
     const storeByUserId = await prismadb.store.findFirst({
@@ -88,7 +88,7 @@ export async function PATCH(
     }
 
     if (!params.colorId) {
-      return new NextResponse('O ID do tipo é obrigatório', { status: 400 });
+      return new NextResponse('O ID do cor é obrigatório', { status: 400 });
     }
 
     const storeByUserId = await prismadb.store.findFirst({
